@@ -16,14 +16,12 @@ const getAllTodos = async (req, res) => {
 
 const createTodo = async (req, res) => {
 	const { task, description, completed } = req.body;
-	const userId = req.user.userId; // Mendapatkan user ID dari token
 
 	try {
 		const todo = await Todo.create({
 			task,
 			description,
 			completed,
-			userId,
 		});
 
 		res.status(201).json(todo);
@@ -57,22 +55,12 @@ const getTodoById = async (req, res) => {
 const updateTodo = async (req, res) => {
 	const { id } = req.params;
 	const { task, description, completed } = req.body;
-	const userId = req.user.userId; // Mendapatkan user ID dari token
 
 	try {
 		const todo = await Todo.findByPk(id);
 
 		if (!todo) {
 			return res.status(404).json({ error: 'Todo not found' });
-		}
-
-		// Pastikan userId pada todo sesuai dengan userId dari token
-		if (!userId || todo.userId !== userId) {
-			return res
-				.status(403)
-				.json({
-					error: 'Unauthorized: You are not allowed to update this todo',
-				});
 		}
 
 		// Update todo properties
