@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "freedb_pakisenju",
+    "password": "uNAtG3Y5#5spEpR",
+    "database": "freedb_sequelize-todo",
+    "host": "sql.freedb.tech",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "freedb_pakisenju",
+    "password": "uNAtG3Y5#5spEpR",
+    "database": "freedb_sequelize-todo",
+    "host": "sql.freedb.tech",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "freedb_pakisenju",
+    "password": "uNAtG3Y5#5spEpR",
+    "database": "freedb_sequelize-todo",
+    "host": "sql.freedb.tech",
+    "dialect": "mysql"
+  }
+}
