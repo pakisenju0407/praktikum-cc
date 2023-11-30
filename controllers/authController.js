@@ -5,9 +5,7 @@ const secretKey = process.env.JWT_SECRET || 'your_fallback_secret_key';
 
 const getAllUsers = async (req, res) => {
 	try {
-		const todos = await User.findAll({
-			include: User,
-		});
+		const users = await User.findAll();
 		res.json(users);
 	} catch (error) {
 		console.error(error);
