@@ -4,7 +4,7 @@ const sequelize = new Sequelize({
 	host: 'sql.freedb.tech',
 	dialect: 'mysql',
     username: 'freedb_pakisenju',
-    password: '7H6es4VZsVjC?5z',
+    password: 'Fpr&Wt2#Kaau*23',
     database: 'freedb_sequelize-todo'
 });
 
