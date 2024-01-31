@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
-app.use('/api/todos', todoRoutes);
+app.use('/todos', todoRoutes);
 app.use('/api/auth', authRoutes);
 
 app.listen(PORT, () => {

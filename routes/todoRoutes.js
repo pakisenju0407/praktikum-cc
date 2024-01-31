@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const todoController = require('../controllers/todoController');
-const authenticationMiddleware = require('../middlewares/authenticationMiddleware');
+// const authenticationMiddleware = require('../middlewares/authenticationMiddleware');
 
-router.use(authenticationMiddleware); // Middleware for authentication
+// router.use(authenticationMiddleware); // Middleware for authentication
 
 // Endpoint untuk mendapatkan semua todo
 router.get('/', todoController.getAllTodos);
